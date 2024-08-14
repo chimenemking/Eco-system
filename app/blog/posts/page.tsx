@@ -18,7 +18,7 @@ const Posts:React.FC<PostPageProps> = async () => {
     <h1 className='text-4xl md:text-5xl  font-semibold mb-5'>
        All Posts 
     </h1>
-        <Suspense fallback={<LoadingPosts/>}><PostLists/></Suspense>
+        <Suspense fallback={<LoadingPosts/>}><PostLists id={''} title={''}/></Suspense>
     </main>
     </>
   )

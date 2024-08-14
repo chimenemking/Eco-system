@@ -19,9 +19,12 @@ export default async function SinglePostPage({params}:{params:{id:string}}){
             {/* <Suspense fallback={<LoadingSinglePost/>}>
             <h1 className="text-2xl"><SinglePost/></h1>
             </Suspense> */}
-            <p className="max-w-[700px] mx-auto">
-                {post.body}
-            </p>
+            <div className="max-w-[700px] mx-auto">
+                <Suspense fallback={<LoadingSinglePost/>}>
+                
+                <SinglePost params={params}/>
+                </Suspense>
+            </div>
         </main>
         </>
     )

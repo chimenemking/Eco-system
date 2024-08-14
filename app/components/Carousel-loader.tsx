@@ -2,9 +2,9 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel'
 import React from 'react'
 
-type Props = {}
+type carouselProps = {}
 
-const CarouselLoader = (props: Props) => {
+const CarouselLoader:React.FC<carouselProps> = () => {
   return (
     <>
       
@@ -19,16 +19,16 @@ const CarouselLoader = (props: Props) => {
           <CarouselItem key={index} className=" basis-auto">
             <div className="flex items-center justify-center w-fit h-24 ">
               <Card>
-                <CardContent className="flex items-center justify-center p-2">
-                  <span className="text-[12px] font-medium">Category{index + 1}</span>
+                <CardContent className="flex items-center bg-gray-200 justify-center p-2">
+                  <span className="text-[12px] font-medium">Category {index + 1}</span>
                 </CardContent>
               </Card>
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className='' />
+      <CarouselNext className='' />
     </Carousel>
     </>
   )

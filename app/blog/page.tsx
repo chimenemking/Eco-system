@@ -1,15 +1,8 @@
 import React from "react";
-import BlogLayout from "./layout";
 import { FaSearch } from "react-icons/fa";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import CarouselLoader from "../components/Carousel-loader";
+import BlogMain from "../components/BlogMain";
 
 type BlogPageProps = {};
 
@@ -23,21 +16,21 @@ const Blogpage: React.FC<BlogPageProps> = () => {
 
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-4">
-            <h1 className="font-medium text-6xl ">
-              <span className="text-gray-700">THE </span>
-              <span className="text-gray-600 font-serif ">BLOGS</span>
+            <h1 className=" font-semibold text-6xl ">
+              <span className=" text-[#33a9ee5e]">THE </span>
+              <span className="text-black font-serif ">BLOGS</span>
             </h1>
-            <span className="text-lg font-light text-gray-700  ">
+            <span className="text-lg font-light text-black">
               {" "}
-              Lorem ipsum dolor sut amet adghsh kajsh hhs but ipa hsueu
-              <br /> hdhrbb jsjjcbjb hdbehdbb dbedbeb
+              Your voice deserves to be heard. Share your passions, 
+              <br />connect with readers, and build your online community. 
+              <br />Start your blogging journey today.
             </span>
           </div>
 
           {/* search field */}
-          <div className=" relative">
-            <input
-              placeholder="Search for a blog..."
+          <div className="relative">
+            <input placeholder="Search for a blog..."
               className="text-md border-b border-b-gray-400 focus:outline-none pl-5 "
             />
             <FaSearch
@@ -48,6 +41,8 @@ const Blogpage: React.FC<BlogPageProps> = () => {
         </div>
         {/*carousel/category buttons  */}
         <CarouselLoader/>
+          <BlogMain/>
+        
       </main>
     </>
   );

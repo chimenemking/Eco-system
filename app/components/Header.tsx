@@ -17,7 +17,7 @@ const navLinks = [
     label:"Posts"
   },
   {
-    href:"/",
+    href:"/blog/create-post",
     label:"Create Posts"
   },
 ]
